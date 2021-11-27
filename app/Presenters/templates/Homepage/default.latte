@@ -2,6 +2,10 @@
 	
 	<h1 n:block="title">Můj blog</h1>
 
+	{*} Odkaz na Edit/create.latte {*}
+	<a n:href="Edit:create">Napsat nový příspěvek</a>
+
+
 	{foreach $posts as $post}
 	<div class="post">
 		<div class="date">{$post->created_at|date:'F j, Y'}</div>
