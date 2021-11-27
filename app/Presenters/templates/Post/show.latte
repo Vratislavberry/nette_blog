@@ -1,10 +1,14 @@
 {block content}
 
+{*}<p><a n:href="Homepage:test">← zpět na výpis příspěvků</a></p>{*}
 <p><a n:href="Homepage:default">← zpět na výpis příspěvků</a></p>
+
 
 <div class="date">{$post->created_at|date:'F j, Y'}</div>
 
 <h1 n:block="title">{$post->title}</h1>
+{*} n:block rika, ze krome toho, ze $post->title bude h1,
+tak take bude title naseho bloku {*}
 
 <div class="post">{$post->content}</div>
 
