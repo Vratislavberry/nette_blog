@@ -2,7 +2,7 @@
 
 {*}<p><a n:href="Homepage:test">← zpět na výpis příspěvků</a></p>{*}
 <p><a n:href="Homepage:default">← zpět na výpis příspěvků</a></p>
-<a n:href="Edit:edit $post->id">Upravit příspěvek</a>
+{if $user->isLoggedIn()}<a n:href="Edit:edit $post->id">Upravit příspěvek</a>{/if}
 
 <div class="date">{$post->created_at|date:'F j, Y'}</div>
 

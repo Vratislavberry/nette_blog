@@ -3,7 +3,7 @@
 	<h1 n:block="title">Můj blog</h1>
 
 	{*} Odkaz na Edit/create.latte {*}
-	<a n:href="Edit:create">Napsat nový příspěvek</a>
+	{if $user->isLoggedIn()}<a n:href="Edit:create">Napsat nový příspěvek</a>{/if}
 
 
 	{foreach $posts as $post}
